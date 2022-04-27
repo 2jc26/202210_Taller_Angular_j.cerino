@@ -1,3 +1,34 @@
-<p>
-  serie-list works!
-</p>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col" style="background-color: #1CA2B8">
+      <h1><img src="./TVSeries.jpg" height="50"> TV Series</h1>
+    </div>
+  </div>
+  <div class="row mt-4">
+    <div class="col-1">
+    </div>
+    <div class="col-4">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Channel</th>
+            <th scope="col">Seasons</th>
+          </tr>
+          <tr style="background-color:#F2F3F2" *ngFor="let serie of series;">
+            <th scope="row">{{serie.id}}</th>
+            <td style="color:blue">{{serie.name}}</td>
+            <td>{{serie.channel}}</td>
+            <td>{{serie.seasons}}</td>
+          </tr>
+        </thead>
+        <tbody id="series"></tbody>
+      </table>
+      <table class="table" id="promedio"></table>
+    </div>
+    <div class="col-4 ml-4">
+      <div class="card" style="width: 18rem;" id="tarjetaSerie"></div>
+    </div>
+  </div>
+</div>
